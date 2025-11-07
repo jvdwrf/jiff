@@ -34,7 +34,6 @@ members = [
     "crates/jiff-static",
     "crates/jiff-tzdb",
     "crates/jiff-tzdb-platform",
-    "crates/jiff-sqlx",
 ]
 
 # Features are documented in the "Crate features" section of the crate docs:
