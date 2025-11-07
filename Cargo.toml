@@ -1,6 +1,6 @@
 [package]
 name = "jiff"
-version = "0.2.16"  #:version
+version = "0.2.16" #:version
 authors = ["Andrew Gallant <jamslam@gmail.com>"]
 license = "Unlicense OR MIT"
 repository = "https://github.com/BurntSushi/jiff"
@@ -20,33 +20,34 @@ rust-version = "1.70"
 # `integration` test target is being ignored. We don't include anything else
 # so tests obviously won't work, but it makes `cargo package` quiet.
 include = [
-  "/src/**/*.rs",
-  "/tests/lib.rs",
-  "/*.md",
-  "COPYING",
-  "LICENSE-MIT",
-  "UNLICENSE",
+    "/src/**/*.rs",
+    "/tests/lib.rs",
+    "/*.md",
+    "COPYING",
+    "LICENSE-MIT",
+    "UNLICENSE",
 ]
 
 [workspace]
 members = [
-  "crates/jiff-cli",
-  "crates/jiff-static",
-  "crates/jiff-tzdb",
-  "crates/jiff-tzdb-platform",
+    "crates/jiff-cli",
+    "crates/jiff-static",
+    "crates/jiff-tzdb",
+    "crates/jiff-tzdb-platform",
+    "crates/jiff-sqlx",
 ]
 
 # Features are documented in the "Crate features" section of the crate docs:
 # https://docs.rs/jiff/*/#crate-features
 [features]
 default = [
-  "std",
-  "tz-system",
-  "tz-fat",
-  "tzdb-bundle-platform",
-  "tzdb-zoneinfo",
-  "tzdb-concatenated",
-  "perf-inline",
+    "std",
+    "tz-system",
+    "tz-fat",
+    "tzdb-bundle-platform",
+    "tzdb-zoneinfo",
+    "tzdb-concatenated",
+    "perf-inline",
 ]
 std = ["alloc", "log?/std", "serde_core?/std"]
 alloc = ["serde_core?/alloc", "portable-atomic-util/alloc"]
